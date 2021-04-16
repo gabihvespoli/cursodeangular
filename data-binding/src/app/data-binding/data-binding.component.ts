@@ -3,10 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-data-binding',
   templateUrl: './data-binding.component.html',
-  styleUrls: ['./data-binding.component.css']
+  styleUrls: ['./data-binding.component.css'],
 })
 export class DataBindingComponent implements OnInit {
-
   // url: string = 'http://loiane.com'
   // cursoAngular: boolean = true
   // urlImagem: string = 'http://lorempixel.com.br/500/400/?2'
@@ -20,8 +19,8 @@ export class DataBindingComponent implements OnInit {
 
   pessoa: any = {
     nome: 'lalala',
-    idade: 12
-  }
+    idade: 12,
+  };
 
   // getValor() {
   //   return 1
@@ -32,7 +31,7 @@ export class DataBindingComponent implements OnInit {
   // }
 
   botaoClicado() {
-    return alert('Clicou!')
+    return alert('Clicou!');
   }
 
   onKeyUp(evento: KeyboardEvent) {
@@ -43,14 +42,12 @@ export class DataBindingComponent implements OnInit {
   salvarValor(valor: any) {
     this.valorSalvo = valor;
   }
-  
+
   onMouseOverOut() {
     this.isMouseOver = !this.isMouseOver;
   }
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
