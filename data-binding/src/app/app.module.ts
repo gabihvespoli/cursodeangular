@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-// import { AlertModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // AlertModule.forRoot(),
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
