@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-binding.component.css'],
 })
 export class DataBindingComponent implements OnInit {
-  // url: string = 'http://loiane.com'
-  // cursoAngular: boolean = true
-  // urlImagem: string = 'http://lorempixel.com.br/500/400/?2'
+  url: string = 'http://loiane.com';
+  cursoAngular: boolean = true;
+  urlImagem: string = 'http://lorempixel.com.br/500/400/?2';
 
   valorAtual: string = '';
   valorSalvo: string = '';
@@ -22,19 +22,20 @@ export class DataBindingComponent implements OnInit {
     idade: 12,
   };
 
-  // getValor() {
-  //   return 1
-  // }
+  getValor() {
+    return 1;
+  }
 
-  // getCurtiCurso() {
-  //   return true
-  // }
+  getCurtiCurso() {
+    return true;
+  }
 
   botaoClicado() {
     return alert('Clicou!');
   }
 
   onKeyUp(evento: KeyboardEvent) {
+    console.log(evento);
     console.log((<HTMLInputElement>evento.target).value);
     this.valorAtual = (<HTMLInputElement>evento.target).value;
   }

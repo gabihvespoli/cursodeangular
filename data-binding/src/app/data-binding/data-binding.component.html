@@ -1,23 +1,25 @@
 <section class="property-binding">
-  <!-- <article>
+  <article>
     <h3>Interpolação</h3>
     <p>String renderizada utilizando interpolação {{ url }}</p>
     <p>Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
     <p>Resultado de 1 + 1 não é: {{ 1 + 1 + getValor() }}</p>
-    <p>Curso de Angular e gosto do curso: {{ cursoAngular && getCurtiCurso() }}</p>
-  </article> -->
+    <p>
+      Curso de Angular e gosto do curso: {{ cursoAngular && getCurtiCurso() }}
+    </p>
+  </article>
 
-  <!-- <article> -->
-  <!-- <h3>Property Binding</h3> -->
-  <!-- interpolação -->
-  <!-- <img src="{{ urlImagem }}">  -->
-  <!-- property binding -->
-  <!-- <img [src]="urlImagem"> -->
-  <!-- o que o Angular faz 'por baixo dos panos' -> ( formato padrão ) -->
-  <!-- <img bind-src="urlImagem"> -->
-  <!-- </article> -->
+  <article>
+    <h3>Property Binding</h3>
+    <!-- interpolação -->
+    <img src="{{ urlImagem }}" />
+    <!-- property binding -->
+    <img [src]="urlImagem" />
+    <!-- o que o Angular faz 'por baixo dos panos' -> ( formato padrão ) -->
+    <img bind-src="urlImagem" />
+  </article>
 
-  <!-- <article>
+  <article>
     <h3>Class e Style Binding</h3>
     <div>
       Selecione uma classe
@@ -71,9 +73,9 @@
         Esse texto só aparece em caso de erro
       </div>
     </div>
-  </article> -->
+  </article>
 
-  <!-- <article>
+  <article>
     <h3>Event binding</h3>
     <div>
       <button (click)="botaoClicado()" class="btn btn-primary">
@@ -83,50 +85,65 @@
 
     <br /><br />
 
-    <input type="text" 
-    (keyup)="onKeyUp($event)"
-    (keyup.enter)="salvarValor(campoInput.value)"
-    (blur)="salvarValor(campoInput.value)"
-    #campoInput /> -->
-  <!-- #campoInput é uma variável local que substitui o $event.target -->
+    <input
+      type="text"
+      (keyup)="onKeyUp($event)"
+      (keyup.enter)="salvarValor(campoInput.value)"
+      (blur)="salvarValor(campoInput.value)"
+      #campoInput
+    />
+    <!-- #campoInput é uma variável local que substitui o $event.target -->
 
-  <!-- <p>Valor atual: {{ valorAtual }}</p>
+    <p>Valor atual: {{ valorAtual }}</p>
     <p>Valor salvo: {{ valorSalvo }}</p>
 
     <br /><br />
     <span
       (mouseover)="onMouseOverOut()"
       (mouseout)="onMouseOverOut()"
-      [class.highlight]="isMouseOver">
-        Passe o mouse sobre mim!
+      [class.highlight]="isMouseOver"
+    >
+      Passe o mouse sobre mim!
     </span>
-  </article> -->
-  <!-- </section> -->
+  </article>
+</section>
 
-  <section class="two-way-binding">
-    <article>
-      <h3>Two-way data binding</h3>
-      <div>
-        <input type="text" [value]="nome" (input)="nome = bla.value" #bla />
-        <br />
+<br /><br />
 
-        <input type="text" [ngModel]="nome" (ngModelChange)="nome = $event" />
-        <br />
+<section class="two-way-binding">
+  <article>
+    <h3>Two-way data binding</h3>
+    <div>
+      <label>property-binding:</label><br />
+      <input type="text" [value]="nome" (input)="nome = bla.value" #bla />
+      <br />
 
-        <label>two-way-data-binding (banana in the box):</label> <br />
-        <input type="text" [(ngModel)]="nome" />
-        <input type="text" bindon-ngModel="nome" />
+      <label>ngModel:</label><br />
+      <input type="text" [ngModel]="nome" (ngModelChange)="nome = $event" />
+      <br />
 
-        <p>Você digitou o {{ nome }}</p>
-      </div>
-      <div>
-        <p>
-          Meu nome é <b>{{ pessoa.nome }}</b> e tenho
-          <b>{{ pessoa.idade }}</b> anos de idade.
-        </p>
-        <input type="text" [(ngModel)]="pessoa.nome" />
-        <input type="text" [(ngModel)]="pessoa.idade" />
-      </div>
-    </article>
-  </section>
+      <label>two-way-data-binding (banana in the box):</label> <br />
+      <input type="text" [(ngModel)]="nome" />
+      <input type="text" bindon-ngModel="nome" />
+
+      <p>Você digitou o {{ nome }}</p>
+    </div>
+    <div>
+      <p>
+        Meu nome é <b>{{ pessoa.nome }}</b> e tenho
+        <b>{{ pessoa.idade }}</b> anos de idade.
+      </p>
+      <input type="text" [(ngModel)]="pessoa.nome" />
+      <input type="text" [(ngModel)]="pessoa.idade" />
+    </div>
+  </article>
+</section>
+
+<br /><br />
+
+<section class="inuput-output-properties">
+  <article>
+    <h3>Input/Output Properties</h3>
+    <app-curso></app-curso>
+  </article>
 </section>
